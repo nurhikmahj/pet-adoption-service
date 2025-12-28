@@ -8,11 +8,12 @@ import lombok.*;
 @NoArgsConstructor
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class UserRequest {
+public class AdopterRequest {
 
-    private String userName;
-    private String userId;
-    private String userAddress;
+    private String adpName;
+    private String adpIdNo;
+    private String adpAddress;
+    private String adpContactNo;
     private Boolean petOwnerFlag;
     private String petId;
 

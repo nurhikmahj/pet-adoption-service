@@ -6,10 +6,10 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface UserProfileRepository extends JpaRepository<UserProfile, Long> {
+public interface AdopterProfileRepository extends JpaRepository<AdopterProfile, Long> {
 
-    UserProfile findByUserNric(String nric);
+    AdopterProfile findByAdpIdNo(String nric);
 
-    List<UserProfile> findAllByOrderByUserName();
+    List<AdopterProfile> findAllByOrderByUserName();
 
 }
