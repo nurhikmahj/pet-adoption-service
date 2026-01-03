@@ -20,7 +20,7 @@ public class UserController {
 
     @PostMapping(value = "/createUser")
     public UserResponse createUser(@RequestBody AdopterRequest adopterRequest) {
-        return adopterProfileService.createadopterProfile(adopterRequest);
+        return adopterProfileService.createAdopterProfile(adopterRequest);
     }
 
     @PutMapping("/updateUser/{userId}")
@@ -30,7 +30,7 @@ public class UserController {
 
     @GetMapping(value = "/getUser/{userId}")
     public RetrieveUserResponse getUser(@PathVariable String userId) {
-        return adopterProfileService.getadopterProfile(userId);
+        return adopterProfileService.getAdopterProfile(userId);
     }
 
     @GetMapping(value = "/getUser/all")

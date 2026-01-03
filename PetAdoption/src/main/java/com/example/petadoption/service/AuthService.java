@@ -20,7 +20,7 @@ public class AuthService {
     }
 
     public ResponseEntity<?> login (LoginRequest request) {
-
+        return null;
     }
 
 }

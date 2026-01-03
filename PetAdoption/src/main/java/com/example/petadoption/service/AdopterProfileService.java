@@ -1,7 +1,6 @@
 package com.example.petadoption.service;
 
 import com.example.petadoption.data.model.AdopterProfile;
-import com.example.petadoption.data.model.AdopterProfile;
 import com.example.petadoption.data.model.AdopterProfileRepository;
 import com.example.petadoption.data.request.AdopterRequest;
 import com.example.petadoption.data.response.RetrieveUserResponse;
@@ -26,7 +25,7 @@ public class AdopterProfileService {
         this.modelMapper = modelMapper;
     }
 
-    public UserResponse createadopterProfile(AdopterRequest adopterRequest) {
+    public UserResponse createAdopterProfile(AdopterRequest adopterRequest) {
         try {
             AdopterProfile adopterProfile = AdopterProfile.builder()
                     .id(UUID.randomUUID().toString())
@@ -46,7 +45,7 @@ public class AdopterProfileService {
         }
     }
 
-    public RetrieveUserResponse getadopterProfile(String userId) {
+    public RetrieveUserResponse getAdopterProfile(String userId) {
         try {
             AdopterProfile user = adopterProfileRepository.findByAdpIdNo(userId);
             return modelMapper.map(user, RetrieveUserResponse.class);
